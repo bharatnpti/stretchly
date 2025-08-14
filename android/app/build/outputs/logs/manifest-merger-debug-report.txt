@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:2:1-39:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/bharatbhushan/.gradle/caches/transforms-3/6e4668f7632793e170097fb19b7ca8ca/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bharatbhushan/.gradle/caches/transforms-3/7fe3dc696d075c7987997b5db1d23e60/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/bharatbhushan/.gradle/caches/transforms-3/3b004f20d66e44f3ee01c265e1575289/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -62,13 +62,17 @@ uses-permission#android.permission.FOREGROUND_SERVICE
 ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:6:5-77
 	android:name
 		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:6:22-74
-uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:7:5-81
+uses-permission#android.permission.FOREGROUND_SERVICE_DATA_SYNC
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:7:5-87
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:7:22-84
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:8:22-78
 application
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:9:5-34:19
-INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:9:5-34:19
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:10:5-37:19
+INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:10:5-37:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/bharatbhushan/.gradle/caches/transforms-3/6e4668f7632793e170097fb19b7ca8ca/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/bharatbhushan/.gradle/caches/transforms-3/6e4668f7632793e170097fb19b7ca8ca/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bharatbhushan/.gradle/caches/transforms-3/7fe3dc696d075c7987997b5db1d23e60/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -90,59 +94,61 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bharatbhushan/.gradl
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:13:9-41
 	android:icon
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:11:9-58
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:12:9-58
 	android:allowBackup
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:15:9-40
 activity#net.hovancik.stretchly.MainActivity
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:15:9-22:20
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:16:9-23:20
 	android:exported
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:16:13-36
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:17:13-36
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:15:19-47
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:16:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:21:27-74
 activity#net.hovancik.stretchly.MicrobreakActivity
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:23:9-56
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:24:9-56
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:23:19-53
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:24:19-53
 activity#net.hovancik.stretchly.BreakActivity
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:24:9-51
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:25:9-51
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:24:19-48
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:25:19-48
 activity#net.hovancik.stretchly.PreferencesActivity
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:25:9-57
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:26:9-57
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:25:19-54
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:26:19-54
 service#net.hovancik.stretchly.BreakSchedulerService
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:26:9-58
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:27:9-29:56
+	android:foregroundServiceType
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:29:13-53
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:26:18-55
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:28:13-50
 receiver#net.hovancik.stretchly.AutostartReceiver
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:28:9-33:20
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:31:9-36:20
 	android:exported
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:29:13-36
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:28:19-52
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:31:19-52
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:30:13-32:29
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:33:13-35:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:31:17-79
+ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:34:17-79
 	android:name
-		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:31:25-76
+		ADDED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:34:25-76
 uses-sdk
 INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml
