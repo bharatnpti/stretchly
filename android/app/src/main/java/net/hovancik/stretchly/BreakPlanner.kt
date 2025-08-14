@@ -15,12 +15,12 @@ class BreakPlanner(private val service: BreakSchedulerService) {
     private val settingsManager = SettingsManager(service)
     private val dndManager = DndManager(service)
     private var nextBreakTime: Long = 0
+    private var snoozedUntilTimeMillis: Long = 0
+    private var skipNextMicrobreak: Boolean = false
+    private var skipNextBreak: Boolean = false
 
     fun scheduleBreaks() {
-        if (dndManager.isDndEnabled()) {
-            Log.d("BreakPlanner", "DND mode is enabled, not scheduling breaks")
-            return
-        }
+        cancelTimers()
         if (settingsManager.getBoolean("microbreakEnabled", DefaultSettings.MICROBREAK_ENABLED)) {
             scheduleMicrobreak()
         }
@@ -36,6 +36,17 @@ class BreakPlanner(private val service: BreakSchedulerService) {
         microbreakTimer?.scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
                 handler.post {
+                    if (shouldSuppressBreak()) {
+                        Log.d("BreakPlanner", "Microbreak suppressed (paused/DND/snoozed)")
+                        updateNextBreakTime()
+                        return@post
+                    }
+                    if (skipNextMicrobreak) {
+                        Log.d("BreakPlanner", "Microbreak skipped once")
+                        skipNextMicrobreak = false
+                        updateNextBreakTime()
+                        return@post
+                    }
                     Log.d("BreakPlanner", "Time for a microbreak!")
                     service.showBreakNotification("Time for a microbreak!", "microbreak")
                     updateNextBreakTime()
@@ -50,6 +61,17 @@ class BreakPlanner(private val service: BreakSchedulerService) {
         breakTimer?.scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
                 handler.post {
+                    if (shouldSuppressBreak()) {
+                        Log.d("BreakPlanner", "Break suppressed (paused/DND/snoozed)")
+                        updateNextBreakTime()
+                        return@post
+                    }
+                    if (skipNextBreak) {
+                        Log.d("BreakPlanner", "Break skipped once")
+                        skipNextBreak = false
+                        updateNextBreakTime()
+                        return@post
+                    }
                     Log.d("BreakPlanner", "Time for a break!")
                     service.showBreakNotification("Time for a break!", "break")
                     updateNextBreakTime()
@@ -61,26 +83,79 @@ class BreakPlanner(private val service: BreakSchedulerService) {
     private fun updateNextBreakTime() {
         val microbreakInterval = settingsManager.getLong("microbreakInterval", DefaultSettings.MICROBREAK_INTERVAL.toLong())
         val breakInterval = settingsManager.getLong("breakInterval", DefaultSettings.BREAK_INTERVAL.toLong())
-        val nextMicrobreakTime = System.currentTimeMillis() + microbreakInterval
-        val nextBreakTime = System.currentTimeMillis() + breakInterval
-
-        this.nextBreakTime = if (settingsManager.getBoolean("microbreakEnabled", DefaultSettings.MICROBREAK_ENABLED) &&
-            (!settingsManager.getBoolean("breakEnabled", DefaultSettings.BREAK_ENABLED) || nextMicrobreakTime < nextBreakTime)) {
-            nextMicrobreakTime
+        val baseline = System.currentTimeMillis()
+        val computedNextMicrobreakTime = baseline + microbreakInterval
+        val computedNextBreakTime = baseline + breakInterval
+        val candidateNextTime = if (settingsManager.getBoolean("microbreakEnabled", DefaultSettings.MICROBREAK_ENABLED) &&
+            (!settingsManager.getBoolean("breakEnabled", DefaultSettings.BREAK_ENABLED) || computedNextMicrobreakTime < computedNextBreakTime)) {
+            computedNextMicrobreakTime
         } else {
-            nextBreakTime
+            computedNextBreakTime
         }
+
+        this.nextBreakTime = maxOf(candidateNextTime, snoozedUntilTimeMillis)
         updateNotification()
     }
 
     private fun updateNotification() {
-        val timeRemaining = nextBreakTime - System.currentTimeMillis()
-        val minutes = TimeUnit.MILLISECONDS.toMinutes(timeRemaining)
+        val now = System.currentTimeMillis()
+        if (isPaused()) {
+            service.updateNotification("Breaks paused")
+            return
+        }
+        if (dndManager.isDndEnabled()) {
+            service.updateNotification("Breaks paused by Do Not Disturb")
+            return
+        }
+        val timeRemaining = nextBreakTime - now
+        val minutes = TimeUnit.MILLISECONDS.toMinutes(maxOf(0, timeRemaining))
         service.updateNotification("Next break in $minutes minutes")
     }
 
     fun stop() {
         microbreakTimer?.cancel()
         breakTimer?.cancel()
+    }
+
+    fun reschedule() {
+        scheduleBreaks()
+    }
+
+    fun setPaused(paused: Boolean) {
+        settingsManager.putBoolean("paused", paused)
+        updateNextBreakTime()
+    }
+
+    fun isPaused(): Boolean {
+        return settingsManager.getBoolean("paused", DefaultSettings.PAUSED)
+    }
+
+    fun snooze(minutes: Int) {
+        val now = System.currentTimeMillis()
+        snoozedUntilTimeMillis = maxOf(snoozedUntilTimeMillis, now + TimeUnit.MINUTES.toMillis(minutes.toLong()))
+        updateNextBreakTime()
+    }
+
+    fun skipOnce(breakType: String) {
+        if (breakType == "microbreak") {
+            skipNextMicrobreak = true
+        } else {
+            skipNextBreak = true
+        }
+        updateNextBreakTime()
+    }
+
+    private fun cancelTimers() {
+        microbreakTimer?.cancel()
+        breakTimer?.cancel()
+        microbreakTimer = null
+        breakTimer = null
+    }
+
+    private fun shouldSuppressBreak(): Boolean {
+        val paused = isPaused()
+        val dnd = dndManager.isDndEnabled()
+        val snoozed = System.currentTimeMillis() < snoozedUntilTimeMillis
+        return paused || dnd || snoozed
     }
 }

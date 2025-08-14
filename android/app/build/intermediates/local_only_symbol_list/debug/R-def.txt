@@ -6,8 +6,12 @@ array microbreak_ideas
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+id breakDurationInput
+id breakIntervalInput
 id breakSwitch
 id messageTextView
+id microbreakDurationInput
+id microbreakIntervalInput
 id microbreakSwitch
 id preferencesButton
 id textView

@@ -9,4 +9,5 @@ object DefaultSettings {
     const val BREAK_NOTIFICATION_INTERVAL = 30 * 1000 // 30 seconds
     const val MICROBREAK_ENABLED = true
     const val BREAK_ENABLED = true
+    const val PAUSED = false
 }

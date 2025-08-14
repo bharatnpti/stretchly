@@ -3178,6 +3178,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id breakDurationInput
+id breakIntervalInput
 id breakSwitch
 id buttonPanel
 id cache_measures
@@ -3349,6 +3351,8 @@ id material_value_index
 id matrix
 id message
 id messageTextView
+id microbreakDurationInput
+id microbreakIntervalInput
 id microbreakSwitch
 id middle
 id mini
