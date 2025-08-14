@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="break_ideas_texts">
+        <item>A short walk can help you clear your head and get your blood flowing.</item>
+        <item>Stretching can help relieve muscle tension and improve flexibility.</item>
+        <item>Staying hydrated is important for your health and can help you stay focused.</item>
+    </string-array>
+    <string-array name="break_ideas_titles">
+        <item>Go for a short walk</item>
+        <item>Do some stretching</item>
+        <item>Get some water</item>
+    </string-array>
+    <string-array name="microbreak_ideas">
+        <item>Look away from the screen for a few seconds.</item>
+        <item>Stand up and stretch.</item>
+        <item>Take a few deep breaths.</item>
+        <item>Close your eyes for a moment.</item>
+    </string-array>
+    <color name="colorAccent">#8BC34A</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <string name="app_name">Stretchly</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

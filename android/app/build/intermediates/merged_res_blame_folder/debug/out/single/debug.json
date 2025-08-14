@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_break.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-33:/layout/activity_break.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_microbreak.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-33:/layout/activity_microbreak.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_preferences.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-33:/layout/activity_preferences.xml"
+    }
+]

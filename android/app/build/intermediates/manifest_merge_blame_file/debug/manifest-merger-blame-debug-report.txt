@@ -1,0 +1,160 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="net.hovancik.stretchly"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:5:5-77
+11-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:5:22-74
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:6:5-77
+12-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:6:22-74
+13    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+13-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:7:5-81
+13-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:7:22-78
+14
+15    <permission
+15-->[androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+16        android:name="net.hovancik.stretchly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="net.hovancik.stretchly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:9:5-34:19
+22        android:allowBackup="true"
+22-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.12.0] /Users/bharatbhushan/.gradle/caches/transforms-3/3f942e3c739240ec0bfc5a538153af6c/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="true"
+26        android:icon="@android:drawable/sym_def_app_icon"
+26-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:11:9-58
+27        android:label="@string/app_name"
+27-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:12:9-41
+28        android:supportsRtl="true"
+28-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:13:9-35
+29        android:theme="@style/AppTheme" >
+29-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:14:9-40
+30        <activity
+30-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:15:9-22:20
+31            android:name="net.hovancik.stretchly.MainActivity"
+31-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:15:19-47
+32            android:exported="true" >
+32-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:16:13-36
+33            <intent-filter>
+33-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:17:13-21:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:18:17-69
+34-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:18:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:20:17-77
+36-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:20:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity android:name="net.hovancik.stretchly.MicrobreakActivity" />
+39-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:23:9-56
+39-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:23:19-53
+40        <activity android:name="net.hovancik.stretchly.BreakActivity" />
+40-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:24:9-51
+40-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:24:19-48
+41        <activity android:name="net.hovancik.stretchly.PreferencesActivity" />
+41-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:25:9-57
+41-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:25:19-54
+42
+43        <service android:name="net.hovancik.stretchly.BreakSchedulerService" />
+43-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:26:9-58
+43-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:26:18-55
+44
+45        <receiver
+45-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:28:9-33:20
+46            android:name="net.hovancik.stretchly.AutostartReceiver"
+46-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:28:19-52
+47            android:exported="true" >
+47-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:29:13-36
+48            <intent-filter>
+48-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:30:13-32:29
+49                <action android:name="android.intent.action.BOOT_COMPLETED" />
+49-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:31:17-79
+49-->/Users/bharatbhushan/IdeaProjects/bharatnpti/stretchly/android/app/src/main/AndroidManifest.xml:31:25-76
+50            </intent-filter>
+51        </receiver>
+52
+53        <provider
+53-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+54            android:name="androidx.startup.InitializationProvider"
+54-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+55            android:authorities="net.hovancik.stretchly.androidx-startup"
+55-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+56            android:exported="false" >
+56-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+57            <meta-data
+57-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+58-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+59                android:value="androidx.startup" />
+59-->[androidx.emoji2:emoji2:1.2.0] /Users/bharatbhushan/.gradle/caches/transforms-3/4767a26787d3ea9caa0d191ca1f53093/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+60            <meta-data
+60-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/bharatbhushan/.gradle/caches/transforms-3/946007d47f777ca98b3135c145c5ec8c/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+61-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/bharatbhushan/.gradle/caches/transforms-3/946007d47f777ca98b3135c145c5ec8c/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+62                android:value="androidx.startup" />
+62-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/bharatbhushan/.gradle/caches/transforms-3/946007d47f777ca98b3135c145c5ec8c/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+63            <meta-data
+63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+65                android:value="androidx.startup" />
+65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+66        </provider>
+67
+68        <receiver
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+69            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+69-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+70            android:directBootAware="false"
+70-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+71            android:enabled="true"
+71-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+72            android:exported="true"
+72-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+73            android:permission="android.permission.DUMP" >
+73-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+74            <intent-filter>
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+75                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+76            </intent-filter>
+77            <intent-filter>
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+78                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+79            </intent-filter>
+80            <intent-filter>
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+81                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+82            </intent-filter>
+83            <intent-filter>
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+84                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/bharatbhushan/.gradle/caches/transforms-3/5bcfca3c911adaee35f6d3296a68e2eb/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+85            </intent-filter>
+86        </receiver>
+87    </application>
+88
+89</manifest>
