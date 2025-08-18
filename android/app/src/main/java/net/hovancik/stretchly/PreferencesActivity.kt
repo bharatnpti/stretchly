@@ -18,6 +18,9 @@ class PreferencesActivity : AppCompatActivity() {
     private lateinit var microbreakDurationInput: TextInputEditText
     private lateinit var breakIntervalInput: TextInputEditText
     private lateinit var breakDurationInput: TextInputEditText
+    private lateinit var hapticSwitch: SwitchMaterial
+    private lateinit var audioSwitch: SwitchMaterial
+    private lateinit var guidedMicrobreaksSwitch: SwitchMaterial
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,20 +28,37 @@ class PreferencesActivity : AppCompatActivity() {
 
         settingsManager = SettingsManager(this)
 
+        initializeViews()
+        loadSettings()
+        setupListeners()
+    }
+
+    private fun initializeViews() {
         microbreakSwitch = findViewById(R.id.microbreakSwitch)
         breakSwitch = findViewById(R.id.breakSwitch)
         microbreakIntervalInput = findViewById(R.id.microbreakIntervalInput)
         microbreakDurationInput = findViewById(R.id.microbreakDurationInput)
         breakIntervalInput = findViewById(R.id.breakIntervalInput)
         breakDurationInput = findViewById(R.id.breakDurationInput)
+        hapticSwitch = findViewById(R.id.hapticSwitch)
+        audioSwitch = findViewById(R.id.audioSwitch)
+        guidedMicrobreaksSwitch = findViewById(R.id.guidedMicrobreaksSwitch)
+    }
 
+    private fun loadSettings() {
         microbreakSwitch.isChecked = settingsManager.getBoolean("microbreakEnabled", DefaultSettings.MICROBREAK_ENABLED)
         breakSwitch.isChecked = settingsManager.getBoolean("breakEnabled", DefaultSettings.BREAK_ENABLED)
         microbreakIntervalInput.setText((settingsManager.getLong("microbreakInterval", DefaultSettings.MICROBREAK_INTERVAL.toLong()) / 60000L).toString())
         microbreakDurationInput.setText((settingsManager.getLong("microbreakDuration", DefaultSettings.MICROBREAK_DURATION.toLong()) / 1000L).toString())
         breakIntervalInput.setText((settingsManager.getLong("breakInterval", DefaultSettings.BREAK_INTERVAL.toLong()) / 60000L).toString())
         breakDurationInput.setText((settingsManager.getLong("breakDuration", DefaultSettings.BREAK_DURATION.toLong()) / 1000L).toString())
+        
+        hapticSwitch.isChecked = settingsManager.getBoolean("hapticEnabled", true)
+        audioSwitch.isChecked = settingsManager.getBoolean("audioEnabled", false)
+        guidedMicrobreaksSwitch.isChecked = settingsManager.getBoolean("guidedMicrobreaksEnabled", true)
+    }
 
+    private fun setupListeners() {
         microbreakSwitch.setOnCheckedChangeListener { _, isChecked ->
             settingsManager.putBoolean("microbreakEnabled", isChecked)
             sendReschedule()
@@ -47,6 +67,18 @@ class PreferencesActivity : AppCompatActivity() {
         breakSwitch.setOnCheckedChangeListener { _, isChecked ->
             settingsManager.putBoolean("breakEnabled", isChecked)
             sendReschedule()
+        }
+
+        hapticSwitch.setOnCheckedChangeListener { _, isChecked ->
+            settingsManager.putBoolean("hapticEnabled", isChecked)
+        }
+
+        audioSwitch.setOnCheckedChangeListener { _, isChecked ->
+            settingsManager.putBoolean("audioEnabled", isChecked)
+        }
+
+        guidedMicrobreaksSwitch.setOnCheckedChangeListener { _, isChecked ->
+            settingsManager.putBoolean("guidedMicrobreaksEnabled", isChecked)
         }
 
         microbreakIntervalInput.addTextChangedListener(object : TextWatcher {

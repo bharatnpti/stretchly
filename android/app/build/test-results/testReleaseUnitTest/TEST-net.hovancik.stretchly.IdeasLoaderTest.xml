@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.hovancik.stretchly.IdeasLoaderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-17T17:41:05" hostname="bharat.bhushan" time="0.045">
+  <properties/>
+  <testcase name="testGetRandomBreakIdea" classname="net.hovancik.stretchly.IdeasLoaderTest" time="0.044"/>
+  <testcase name="testGetRandomMicrobreakIdea" classname="net.hovancik.stretchly.IdeasLoaderTest" time="0.001"/>
+  <system-out><![CDATA[ContentPackManager returned: Mindful Moment - Practice a quick mindfulness exercise
+IdeasLoader returned: Hydration Break - Get up and refill your water bottle
+ContentPackManager returned: Roll your shoulders backward and forward
+IdeasLoader returned: Take a deep breath and relax your shoulders
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

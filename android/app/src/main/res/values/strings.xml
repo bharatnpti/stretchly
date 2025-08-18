@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Stretchly</string>
+    <string name="app_description">Take regular breaks to stay healthy and productive</string>
+    <string name="microbreak_title">Microbreak</string>
+    <string name="break_title">Break</string>
+    <string name="guided_exercise">Guided Exercise</string>
+    <string name="skip">Skip</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="snooze">Snooze</string>
 </resources>

@@ -24,9 +24,10 @@ class BreakActivity : AppCompatActivity() {
         messageTextView = findViewById(R.id.messageTextView)
         ideasLoader = IdeasLoader(this)
 
-        val idea = ideasLoader.getRandomBreakIdea()
-        titleTextView.text = idea.first
-        messageTextView.text = idea.second
+        // Use content packs for ideas
+        val idea = ContentPackManager.getRandomBreakIdea()
+        titleTextView.text = idea.title
+        messageTextView.text = idea.description
 
         val duration = intent.getLongExtra("duration", DefaultSettings.BREAK_DURATION.toLong())
 
@@ -36,6 +37,8 @@ class BreakActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
+                // Record the break completion
+                InsightsManager.recordBreak("break", duration)
                 finish()
             }
         }.start()

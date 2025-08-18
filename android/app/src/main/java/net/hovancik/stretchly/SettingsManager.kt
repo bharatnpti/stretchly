@@ -22,4 +22,24 @@ class SettingsManager(context: Context) {
     fun putLong(key: String, value: Long) {
         sharedPreferences.edit().putLong(key, value).apply()
     }
+
+    fun getString(key: String, defaultValue: String): String {
+        return sharedPreferences.getString(key, defaultValue) ?: defaultValue
+    }
+
+    fun putString(key: String, value: String) {
+        sharedPreferences.edit().putString(key, value).apply()
+    }
+
+    fun getInt(key: String, defaultValue: Int): Int {
+        return sharedPreferences.getInt(key, defaultValue)
+    }
+
+    fun putInt(key: String, value: Int) {
+        sharedPreferences.edit().putInt(key, value).apply()
+    }
+
+    fun remove(key: String) {
+        sharedPreferences.edit().remove(key).apply()
+    }
 }

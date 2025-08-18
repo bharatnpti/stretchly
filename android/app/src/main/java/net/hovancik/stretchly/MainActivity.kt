@@ -28,10 +28,28 @@ class MainActivity : AppCompatActivity() {
             startService(Intent(this, BreakSchedulerService::class.java))
         }
 
+        setupNavigationButtons()
+    }
 
-        val preferencesButton = findViewById<Button>(R.id.preferencesButton)
-        preferencesButton.setOnClickListener {
+    private fun setupNavigationButtons() {
+        findViewById<Button>(R.id.preferencesButton).setOnClickListener {
             startActivity(Intent(this, PreferencesActivity::class.java))
+        }
+        
+        findViewById<Button>(R.id.insightsButton).setOnClickListener {
+            startActivity(Intent(this, InsightsActivity::class.java))
+        }
+        
+        findViewById<Button>(R.id.badgesButton).setOnClickListener {
+            startActivity(Intent(this, BadgesActivity::class.java))
+        }
+        
+        findViewById<Button>(R.id.goalModesButton).setOnClickListener {
+            startActivity(Intent(this, GoalModesActivity::class.java))
+        }
+        
+        findViewById<Button>(R.id.contentPacksButton).setOnClickListener {
+            startActivity(Intent(this, ContentPacksActivity::class.java))
         }
     }
 

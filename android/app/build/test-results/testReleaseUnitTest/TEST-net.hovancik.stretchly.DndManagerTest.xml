@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.hovancik.stretchly.DndManagerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-08-17T17:41:04" hostname="bharat.bhushan" time="0.542">
+  <properties/>
+  <testcase name="testIsDndEnabled_whenFilterIsNone_returnsTrue" classname="net.hovancik.stretchly.DndManagerTest" time="0.54"/>
+  <testcase name="testIsDndEnabled_whenFilterIsAll_returnsFalse" classname="net.hovancik.stretchly.DndManagerTest" time="0.001"/>
+  <testcase name="testIsDndEnabled_whenFilterIsPriority_returnsTrue" classname="net.hovancik.stretchly.DndManagerTest" time="0.001"/>
+  <testcase name="testIsDndEnabled_whenFilterIsAlarms_returnsTrue" classname="net.hovancik.stretchly.DndManagerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

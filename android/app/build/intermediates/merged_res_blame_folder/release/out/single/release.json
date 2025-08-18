@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_badges.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_badges.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_guided_microbreak.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_guided_microbreak.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_microbreak.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_microbreak.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_item_badge.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/item_badge.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_main.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_content_packs.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_content_packs.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_preferences.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_preferences.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_edit_goal_mode.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_edit_goal_mode.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_goal_modes.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_goal_modes.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_item_content_pack.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/item_content_pack.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_break.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_break.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_item_goal_mode.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/item_goal_mode.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/drawable_button_background.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/drawable/button_background.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/drawable_breathing_circle.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/drawable/breathing_circle.xml"
+    },
+    {
+        "merged": "net.hovancik.stretchly.app-merged_res-31:/layout_activity_insights.xml.flat",
+        "source": "net.hovancik.stretchly.app-main-32:/layout/activity_insights.xml"
+    }
+]

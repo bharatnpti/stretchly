@@ -93,9 +93,15 @@
   - Pomodoro: 25/5 with optional long break after N cycles
   - Balanced: regular microbreaks and periodic long breaks
   - Gentle: fewer prompts, longer intervals
+  - Intensive: frequent short breaks for high-focus work
 - **Custom goals**:
   - Daily targets (e.g., “8 microbreaks and 2 long breaks”)
   - Long break frequency after N microbreaks
   - Work hours and weekdays/weekends profiles
-- **Controls**: Preferences → Goal modes: select preset or build your own.
+- **Editing capabilities**:
+  - Edit any preset mode (creates a custom copy)
+  - Edit custom modes (modify all parameters)
+  - Create new custom modes from scratch
+  - Delete custom modes
+- **Controls**: Preferences → Goal modes: select, edit, or create custom modes.
 

@@ -49,6 +49,7 @@ class BreakPlanner(private val service: BreakSchedulerService) {
                     }
                     Log.d("BreakPlanner", "Time for a microbreak!")
                     service.showBreakNotification("Time for a microbreak!", "microbreak")
+                    InsightsManager.recordBreak("microbreak", 0, wasSkipped = false, wasSnoozed = false, reason = null)
                     updateNextBreakTime()
                 }
             }
@@ -74,6 +75,7 @@ class BreakPlanner(private val service: BreakSchedulerService) {
                     }
                     Log.d("BreakPlanner", "Time for a break!")
                     service.showBreakNotification("Time for a break!", "break")
+                    InsightsManager.recordBreak("break", 0, wasSkipped = false, wasSnoozed = false, reason = null)
                     updateNextBreakTime()
                 }
             }
@@ -156,6 +158,7 @@ class BreakPlanner(private val service: BreakSchedulerService) {
         val paused = isPaused()
         val dnd = dndManager.isDndEnabled()
         val snoozed = System.currentTimeMillis() < snoozedUntilTimeMillis
-        return paused || dnd || snoozed
+        val withinWorkHours = GoalModeManager.isWithinWorkHours()
+        return paused || dnd || snoozed || !withinWorkHours
     }
 }

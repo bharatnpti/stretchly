@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.hovancik.stretchly.IdeasLoaderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-17T17:40:54" hostname="bharat.bhushan" time="0.563">
+  <properties/>
+  <testcase name="testGetRandomBreakIdea" classname="net.hovancik.stretchly.IdeasLoaderTest" time="0.562"/>
+  <testcase name="testGetRandomMicrobreakIdea" classname="net.hovancik.stretchly.IdeasLoaderTest" time="0.001"/>
+  <system-out><![CDATA[ContentPackManager returned: Hydration Break - Get up and refill your water bottle
+IdeasLoader returned: Short Walk - Take a 5-minute walk around your workspace
+ContentPackManager returned: Stand up and stretch your arms overhead
+IdeasLoader returned: Stand up and stretch your arms overhead
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
